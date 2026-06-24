@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Losing the ground</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+
+<div id="hud">
+    You got: <span id="score">0</span> blue socks <img src="assets/blue_socksv2.png">
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="assets/background_music.mp3" type="audio/mpeg">
+</audio>
+<script>
+    document.getElementById("bgMusic").volume = 0.01;
+</script>
+
+<div id="startMenu">
+    <div id="startContent">
+        <h1>CAN'T FEEL THE FLOOR IN MY NEW ROCKS</h1>
+        <div class="rules">
+            <h3>RULES:</h3>
+            <ul>
+                <li>You move using the keys <strong>W, A, S, D</strong>.</li>
+                <li>The floor (tiles) disappears randomly every second!</li>
+                <li>You cannot fall, if you enter a black hole, you lose (You will stop feeling the floor).</li>
+                <li>Every second of survival adds 1 point to the score.</li>
+                <li>It's better to play it on PC or Laptop.</li>
+                <li>YOU NEED TO FEEL THE FLOOR IN YOUR NEW ROCKS!</li>
+                <li>Pssst... Turn up the volume :></li>
+            </ul>
+        </div>
+        <button id="playButton">PLAY AND TRY NEW ROCKS</button>
+    </div>
+</div>
+
+<div id="game">
+    <div id="player"></div>
+</div>
+
+<div id="gameOver" class="hidden">
+    <h1>CAN'T FEEL THE FLOOR IN MY NEW ROCKS</h1>
+    <p id="finalScore">You got: <span>0</span> socks <br> GET BETTER!</p>
+    <button onclick="location.reload()">TRY NEW ROCKS AGAIN</button>
+</div>
+<div id="touchController" class="hidden">
+    <div class="row"><button id="btnUp">W</button></div>
+    <div class="row">
+        <button id="btnLeft">A</button>
+        <button id="btnDown">S</button>
+        <button id="btnRight">D</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
